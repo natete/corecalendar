@@ -1,0 +1,16 @@
+<div #wrapper class="calendar-wrapper" text-nowrap>
+
+  <div *ngFor="let day of days"
+       (click)="selectDate(day, $event.target)"
+       class="date-wrapper"
+       [class.post-today]="day.isAfter(today, 'day')">
+
+    <ion-note class="weekday">{{daysOfTheWeek[day.isoWeekday() - 1]}}</ion-note>
+    <div class="date" [class.active]="day.isSame(activeDay, 'day')">{{day.date()}}</div>
+
+  </div>
+
+
+</div>
+
+<div text-center>{{activeDay.format('dddd D [de] MMMM [de] YYYY')}}</div>

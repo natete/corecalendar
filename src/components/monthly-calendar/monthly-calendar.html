@@ -1,0 +1,18 @@
+<div (swipe)="onSwipe($event.direction)">
+  <template #headerTemp>
+    <div class="cal-cell-row">
+      <div class="cal-cell cal-past cal-header" *ngFor="let label of labels">
+        {{label}}
+      </div>
+    </div>
+  </template>
+  <mwl-calendar-month-view [viewDate]="date.toDate()"
+                           [locale]="locale"
+                           [weekStartsOn]="weekStartsOn"
+                           [headerTemplate]="headerTemp"
+                           [events]="events"
+                           [excludeDays]="excludeDays"
+                           (dayClicked)="onDateSelected($event.day.date)">
+
+  </mwl-calendar-month-view>
+</div>

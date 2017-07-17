@@ -1,0 +1,30 @@
+page-event {
+
+  ion-list.form-wrapper {
+    > .item-block:first-child {
+      border-top: none;
+    }
+  }
+
+  .client-container {
+    ion-label {
+
+      &:first-child {
+        flex: 1 0 0;
+      }
+
+      &:last-child {
+        flex: 2 0 0;
+      }
+    }
+  }
+
+  .save-event-button {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 95%;
+    margin: auto;
+  }
+}

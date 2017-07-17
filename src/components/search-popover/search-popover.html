@@ -1,0 +1,11 @@
+<ion-item>
+  <ion-label floating>Cliente</ion-label>
+  <ion-input type="text" [(ngModel)]="searchTerm" (keyup)="onTextChange()"></ion-input>
+</ion-item>
+
+<ion-list class="users-list">
+  <ion-item *ngFor="let client of clients"
+            (click)="selectClient(client)">
+    {{client.getFullName()}}
+  </ion-item>
+</ion-list>

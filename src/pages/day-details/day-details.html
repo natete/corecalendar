@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+<calendar [activeDay]="selectedDate" (onDateChanged)="selectedDate = $event"></calendar>
+
+<ion-content #content>
+
+  <mwl-calendar-day-view *ngIf="eventsObservable | async; let events;"
+                         [viewDate]="selectedDate"
+                         dayStartHour="8"
+                         dayEndHour="22"
+                         hourSegments="1"
+                         [eventWidth]="eventWidth"
+                         [events]="events"
+                         (hourSegmentClicked)="showAddEvent($event.date)"
+                         (eventClicked)="showEditEvent($event.event.session)">
+
+  </mwl-calendar-day-view>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="showAddEvent(selectedDate)">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

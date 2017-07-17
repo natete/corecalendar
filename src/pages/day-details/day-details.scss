@@ -1,0 +1,76 @@
+page-day-details {
+
+  calendar {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid darkgray;
+    margin-top: 44px;
+    background-color: white;
+  }
+
+  .content {
+    background: none;
+    top: 111px;
+    height: calc(100% - 111px);
+
+    .scroll-content {
+      background-color: white;
+    }
+
+    .cal-day-view {
+      padding-bottom: 70px;
+    }
+
+    mwl-calendar-day-view-hour-segment {
+
+      height: 110px;
+
+      .cal-hour-segment {
+        height: 100%;
+
+        .cal-time {
+          font-size: 10px;
+          width: 40px;
+          text-align: left;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .cal-events {
+      //padding-left: 70px;
+      //
+      .cal-event-container {
+        //  width: calc((100% - 70px) / 5) !important;
+        //  height: 100px !important;
+        //
+        //  &:first-child {
+        //    margin-left: 0 !important;
+        //  }
+        //
+        //  &:nth-child(2) {
+        //    margin-left: calc((100% - 70px) / 5) !important;
+        //  }
+        //
+        //  &:nth-child(3) {
+        //    margin-left: calc(2 * (100% - 70px) / 5) !important;
+        //  }
+        //
+        //  &:nth-child(4) {
+        //    margin-left: calc(3 * (100% - 70px) / 5) !important;
+        //  }
+        //
+        //  &:nth-child(5) {
+        //    margin-left: calc(4 * (100% - 70px) / 5) !important;
+        //  }
+
+        .cal-event-title {
+          text-decoration: none;
+          word-wrap: normal;
+          white-space: normal;
+        }
+      }
+    }
+  }
+
+}

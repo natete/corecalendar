@@ -1,0 +1,29 @@
+<ion-content padding>
+
+  <img class="logo" src="../../assets/images/logo.png" alt="logo">
+
+  <form (submit)="login()">
+    <ion-list class="login-form">
+      <ion-item>
+        <ion-label floating text-uppercase>Usuario</ion-label>
+        <ion-input type="text" name="username" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating text-uppercase>Contraseña</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-label class="error-message" color="danger">{{errorMessage}}</ion-label>
+
+    <button ion-button block
+            type="submit"
+            color="primary"
+            [disabled]="!username || !password"
+            text-uppercase>
+      Entrar
+    </button>
+  </form>
+
+</ion-content>

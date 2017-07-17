@@ -1,0 +1,38 @@
+calendar {
+
+  .calendar-wrapper {
+    overflow: auto;
+  }
+
+  .date-wrapper {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    //padding-top: 5px;
+    margin: 0 5px 15px;
+
+    &.post-today {
+      color: darkgray;
+    }
+
+    .weekday {
+      font-size: 10px;
+      display: inline-block;
+      margin-bottom: 11px;
+      vertical-align: top;
+    }
+
+    .date {
+      line-height: 29px;
+      width: 29px;
+      margin: auto;
+
+      &.active {
+        background: red;
+        border-radius: 50%;
+        color: white;
+      }
+    }
+  }
+}
