@@ -19,6 +19,7 @@ export class CalendarComponent implements OnInit {
   @Output() onDateChanged = new EventEmitter<Moment>();
   days: Moment[] = [];
   daysOfTheWeek = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+  readonly today = moment();
 
   constructor() { }
 
