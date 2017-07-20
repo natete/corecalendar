@@ -39,6 +39,4 @@ export class MonthlyCalendarComponent implements OnInit {
   onDateSelected(date: Date) {
     this.onClick.emit({ date: moment(date) });
   }
-
-
 }

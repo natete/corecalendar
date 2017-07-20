@@ -10,7 +10,7 @@
   <monthly-calendar (onClick)="goToDate($event)" (onChangeMonth)="month = $event"></monthly-calendar>
 
   <ion-fab bottom right>
-    <button ion-fab>
+    <button ion-fab (click)="showAddEvent()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
